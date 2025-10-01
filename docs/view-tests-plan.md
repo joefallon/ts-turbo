@@ -53,18 +53,18 @@ and maintainable.
          with the expected options shape.
    - [x] If `delegate.allowsImmediateRender` returns `false`, `render` should
          wait for the interception promise to resolve before rendering.
-   - [ ] After rendering, `render` should call `delegate.viewRenderedSnapshot(snapshot, isPreview, renderMethod)`
+   - [x] After rendering, `render` should call `delegate.viewRenderedSnapshot(snapshot, isPreview, renderMethod)`
          and `delegate.preloadOnLoadLinksForView(this.element)` and
          `finishRenderingSnapshot(renderer)`.
-   - [ ] When `renderer.shouldRender` is false but `renderer.willRender` is
+   - [x] When `renderer.shouldRender` is false but `renderer.willRender` is
          truthy, `render` should call `invalidate(renderer.reloadReason)`.
-   - [ ] `invalidate(reason)` should call `delegate.viewInvalidated(reason)`.
+   - [x] `invalidate(reason)` should call `delegate.viewInvalidated(reason)`.
 
 4. Rendering helpers and lifecycle
-   - [ ] prepareToRenderSnapshot(renderer) should call `markAsPreview(renderer.isPreview)`
+   - [x] prepareToRenderSnapshot(renderer) should call `markAsPreview(renderer.isPreview)`
          then `await renderer.prepareToRender()`.
-   - [ ] renderSnapshot(renderer) should await `renderer.render()`.
-   - [ ] finishRenderingSnapshot(renderer) should call `renderer.finishRendering()`.
+   - [x] renderSnapshot(renderer) should await `renderer.render()`.
+   - [x] finishRenderingSnapshot(renderer) should call `renderer.finishRendering()`.
 
 5. Attribute toggles
    - [ ] markAsPreview(true) should set `data-turbo-preview` on `this.element`.
